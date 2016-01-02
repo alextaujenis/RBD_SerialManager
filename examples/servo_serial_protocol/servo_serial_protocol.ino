@@ -1,13 +1,13 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.1 Example - Control the rotation of a servo with serial commands: up; down; move,90;
+// Arduino RBD Serial Manager Library v1.0.0-alpha.2 Example - Control the rotation of a servo with serial commands: up; down; move,90;
 // https://github.com/alextaujenis/RBD_SerialManager
-// Copyright 2015 Alex Taujenis
+// Copyright 2016 Alex Taujenis
 // MIT License
 
-#include <RBD_SerialManager.h> // https://github.com/alextaujenis/RBD_SerialManager
 #include <RBD_Servo.h>         // https://github.com/alextaujenis/RBD_Servo
+#include <RBD_SerialManager.h> // https://github.com/alextaujenis/RBD_SerialManager
 
-RBD::SerialManager usb;
 RBD::Servo servo(2, 700, 2300); // digital pin 2, 700ms - 2300ms pulse range
+RBD::SerialManager usb;
 
 void setup() {
   usb.start();

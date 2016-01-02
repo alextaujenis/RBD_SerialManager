@@ -1,6 +1,6 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.1 Example - Receive, parse, then echo characters back to serial output.
+// Arduino RBD Serial Manager Library v1.0.0-alpha.2 Example - Quickly define and consume an event-based serial protocol.
 // https://github.com/alextaujenis/RBD_SerialManager
-// Copyright 2015 Alex Taujenis
+// Copyright 2016 Alex Taujenis
 // MIT License
 
 #include <RBD_SerialManager.h> // https://github.com/alextaujenis/RBD_SerialManager
@@ -12,8 +12,16 @@ void setup() {
 }
 
 void loop() {
+  // example commands: on; pwm,123;
   if(serial_manager.onReceive()) {
-    // example serial command: hello world;
-    Serial.println(serial_manager.getValue());
+    if(serial_manager.isCmd("on")) {
+      serial_manager.println("IT'S ON!");
+    }
+
+    if(serial_manager.isCmd("pwm")) {
+      int value = serial_manager.getParam().toInt();
+      serial_manager.print("SET PWM ");
+      serial_manager.println(value);
+    }
   }
 }

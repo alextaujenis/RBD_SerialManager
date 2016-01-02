@@ -1,6 +1,6 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.1 - A simple interface for serial communication.
+// Arduino RBD Serial Manager Library v1.0.0-alpha.2 - A simple interface for serial communication.
 // https://github.com/alextaujenis/RBD_SerialManager
-// Copyright 2015 Alex Taujenis
+// Copyright 2016 Alex Taujenis
 // MIT License
 
 #include <Arduino.h>
