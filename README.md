@@ -1,4 +1,4 @@
-#Arduino Serial Manager Library v1.0.0-alpha.2
+#Arduino Serial Manager Library v1.0.0-alpha.3
 A simple interface for serial communication.
 
 * [Documentation](http://robotsbigdata.com/docs-arduino-serial-manager.html)

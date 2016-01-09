@@ -1,4 +1,4 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.2 - A simple interface for serial communication.
+// Arduino RBD Serial Manager Library v1.0.0-alpha.3 - A simple interface for serial communication.
 // https://github.com/alextaujenis/RBD_SerialManager
 // Copyright 2016 Alex Taujenis
 // MIT License
@@ -11,6 +11,7 @@
 namespace RBD {
   class SerialManager {
     public:
+      SerialManager();
       void start();
       void setFlag(char value);
       void setDelimiter(char value);
@@ -25,7 +26,7 @@ namespace RBD {
     private:
       int _position;
       char _char;
-      char _flag      = ';';
+      char _flag      = '\n'; // you must set the serial monitor to include a newline with each command
       char _delimiter = ',';
       String _buffer  = "";
       String _value   = "";

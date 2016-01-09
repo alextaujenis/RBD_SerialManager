@@ -1,4 +1,4 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.2 Example - Quickly define and consume an event-based serial protocol.
+// Arduino RBD Serial Manager Library v1.0.0-alpha.3 Example - Quickly define and consume an event-based serial protocol.
 // https://github.com/alextaujenis/RBD_SerialManager
 // Copyright 2016 Alex Taujenis
 // MIT License
@@ -12,12 +12,14 @@ void setup() {
 }
 
 void loop() {
-  // example commands: on; pwm,123;
+  // you must set the serial monitor to include a newline with each command
   if(serial_manager.onReceive()) {
+    // example command: on
     if(serial_manager.isCmd("on")) {
       serial_manager.println("IT'S ON!");
     }
 
+    // example command: pwm,123
     if(serial_manager.isCmd("pwm")) {
       int value = serial_manager.getParam().toInt();
       serial_manager.print("SET PWM ");

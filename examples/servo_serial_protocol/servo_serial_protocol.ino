@@ -1,4 +1,4 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.2 Example - Control the rotation of a servo with serial commands: up; down; move,90;
+// Arduino RBD Serial Manager Library v1.0.0-alpha.3 Example - Control the rotation of a servo with serial commands: up down move,90
 // https://github.com/alextaujenis/RBD_SerialManager
 // Copyright 2016 Alex Taujenis
 // MIT License
@@ -14,23 +14,23 @@ void setup() {
 }
 
 void loop() {
-  servo.update();
-
+  // you must set the serial monitor to include a newline with each command
   if(usb.onReceive()) {
-    // example serial command: up;
+    // example serial command: up
     if(usb.isCmd("up")) {
       servo.moveToDegrees(180);
     }
 
-    // example serial command: down;
+    // example serial command: down
     else if(usb.isCmd("down")) {
       servo.moveToDegrees(0);
     }
 
-    // example serial command: move,90;
+    // example serial command: move,90
     else if(usb.isCmd("move")) {
       int _position = usb.getParam().toInt();
       servo.moveToDegrees(_position);
     }
   }
+  servo.update();
 }
