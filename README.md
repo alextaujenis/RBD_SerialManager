@@ -1,4 +1,4 @@
-#Arduino Serial Manager Library v1.0.0-alpha.3
+# Arduino Serial Manager Library v1.0.0-alpha.3
 A simple interface for serial communication.
 
 * [Documentation](http://robotsbigdata.com/docs-arduino-serial-manager.html)
@@ -8,5 +8,5 @@ A simple interface for serial communication.
 
 \**Please include your Arduino make/model and IDE version when reporting an issue with this library.*
 
-#License
+# License
 This code is available under the [MIT License](http://opensource.org/licenses/mit-license.php).
