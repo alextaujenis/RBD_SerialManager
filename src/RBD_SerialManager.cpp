@@ -11,11 +11,16 @@ namespace RBD {
 
   void SerialManager::start() {
     Serial.begin(115200);
+	SerialManager::_serial = &Serial;
+  }
+  
+  void SerialManager::start(Stream &_serial) {
+	  SerialManager::_serial = &_serial;
   }
 
   bool SerialManager::onReceive() {
-    if(Serial.available()) {
-      _char = char(Serial.read());
+    if(SerialManager::_serial->available()) {
+      _char = char(SerialManager::_serial->read());
 
       if(_char == _flag) {
         _value  = _buffer;
