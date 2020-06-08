@@ -1,7 +1,6 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.3 Example - Quickly define and consume an event-based serial protocol.
+// Arduino RBD Serial Manager Library v1.0.0 Example - Quickly define and consume an event-based serial protocol.
 // https://github.com/alextaujenis/RBD_SerialManager
-// Copyright 2016 Alex Taujenis
-// MIT License
+// Copyright (c) 2015 Alex Taujenis - MIT License
 
 #include <RBD_SerialManager.h> // https://github.com/alextaujenis/RBD_SerialManager
 

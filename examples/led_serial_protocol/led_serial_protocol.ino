@@ -1,7 +1,6 @@
-// Arduino RBD Serial Manager Library v1.0.0-alpha.3 Example - Control the built-in Arduino led with serial commands: on off pwm,255
+// Arduino RBD Serial Manager Library v1.0.0 Example - Control the built-in Arduino led with serial commands: on off pwm,255
 // https://github.com/alextaujenis/RBD_SerialManager
-// Copyright 2016 Alex Taujenis
-// MIT License
+// Copyright (c) 2015 Alex Taujenis - MIT License
 
 #include <RBD_Timer.h>         // https://github.com/alextaujenis/RBD_Timer
 #include <RBD_Light.h>         // https://github.com/alextaujenis/RBD_Light
